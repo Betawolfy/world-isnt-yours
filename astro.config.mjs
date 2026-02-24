@@ -22,17 +22,16 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-				{
 					label: 'Misc',
 					items: [
 						{ label: 'Credits', slug: 'credits' },
 					]
 				},
 			],
-			plugins: [starlightThemeObsidian()],
+			plugins: [starlightThemeObsidian({
+                   backlinks: false,
+                   graph: false
+            })],
 		}),
 	],
 });
