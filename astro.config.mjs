@@ -22,6 +22,12 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Crafts',
+					items: [
+						{ label: 'Custom Crafts', slug: 'crafts' },
+					]
+				},
+				{
 					label: 'Misc',
 					items: [
 						{ label: 'Credits', slug: 'credits' },
