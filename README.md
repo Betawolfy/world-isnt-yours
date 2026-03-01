@@ -1,19 +1,19 @@
-# Starlight Starter Kit: Basics
+# Distinct Errors Wiki - Version 2
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-```
-bun create astro@latest -- --template starlight
-```
+`World isn't yours` is the project name of the version 2 of the wiki destined to be used by Distinct Errors SMP players.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This wiki contains various informations about [Origins](https://wiki-v2.distinct-errors.fr/guides/origins/) or [guides to join us](https://wiki-v2.distinct-errors.fr/guides/getting-started/) and much more in the future.
 
-## 🚀 Project Structure
+We are currently using ***Starlight*** to make this wiki / documentation place possible.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## Usage
 
-```
-.
+Using Starlist is easy!
+Default config looks like this:
+
+```txt
 ├── public/
 ├── src/
 │   ├── assets/
@@ -25,25 +25,9 @@ Inside of your Astro + Starlight project, you'll see the following folders and f
 └── tsconfig.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+***Everything you shall update is on `src/content/docs/`!!***
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## Contribution
 
-Static assets, like favicons, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+As of now, all pull requests are welcomed, but they will be carefully reviewed.
+Our team has priority over others.
