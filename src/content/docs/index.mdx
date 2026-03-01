@@ -18,7 +18,15 @@ hero:
       variant: minimal
 ---
 
-import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard, Code } from '@astrojs/starlight/components';
+
+export const exampleCode = `
+   (\\ /)
+   ( . .)           Hello, me bnuy!
+ c((")("))
+`;
+export const fileName = 'bnuy.de';
+export const highlights = ['bnuy'];
 
 Hello and welcome to the **Distinct Errors SMP** Wiki. All important information, as well as some useful guides will be posted here.
 
@@ -33,3 +41,7 @@ Hello and welcome to the **Distinct Errors SMP** Wiki. All important information
 		You can request new pages by opening a ticket in the discord server.
 	</Card>
 </CardGrid>
+
+
+
+<Code code={exampleCode} lang="txt" title={fileName} mark={highlights} />
