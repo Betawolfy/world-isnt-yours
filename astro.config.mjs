@@ -28,8 +28,15 @@ export default defineConfig({
 					]
 				},
 				{
+					label: 'Lore',
+					items: [
+						{ label: 'Prologue', slug: 'lore/prologue' },
+					]
+				},
+				{
 					label: 'Misc',
 					items: [
+						{ label: 'FAQ / Troubleshooting', slug: 'troubleshoot' },
 						{ label: 'Credits', slug: 'credits' },
 					]
 				},
