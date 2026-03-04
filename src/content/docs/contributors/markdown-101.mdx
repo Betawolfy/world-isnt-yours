@@ -1,0 +1,291 @@
+---
+title: Wiki Contributors Vault - Markdown 101
+description: Get a basic understanding of Markdown, the language used to write the wiki pages.
+---
+import { Steps, Icon, Badge, Aside, LinkCard, CardGrid, Code } from '@astrojs/starlight/components';
+
+Markdown is a lightweight markup language that allows you to format text using simple syntax. 
+It's widely used for writing documentation, including our wiki pages. 
+Here's a basic introduction to Markdown to help you get started with contributing to the wiki.
+
+Later on, we will also cover MDX, which is an extension of Markdown that allows us to use React components in our markdown files, giving us more flexibility and interactivity in our wiki pages.
+
+## Basic Markdown Syntax
+
+### Headings
+You can create headings by using the `#` symbol followed by a space and the heading text.
+
+```md
+# Heading 1 
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+```
+
+You may use as many `#` symbols as you want, but it's common practice to use them in a hierarchical manner.
+Use `#` for the main title, `##` for section titles, and so on.
+
+### Emphasis
+You can emphasize text using asterisks `*` or underscores `_`.
+
+*Italic* text can be created by wrapping the text in a single asterisk or underscore.
+```md
+*Italic* or _Italic_
+```
+
+**Bold** text can be created by wrapping the text in double asterisks or underscores.
+```md
+**Bold** or __Bold__
+```
+
+You can also combine them for ***bold and italic*** text.
+```md
+***Bold and Italic***
+```
+
+### Lists
+You can create ordered and unordered lists.
+
+Unordered lists use asterisks `*`, plus signs `+`, or hyphens `-` as bullet points.
+```md
+- Item 1
+* Item 2
++ Item 3
+```
+**Preview:**
+- Item 1
+* Item 2
++ Item 3
+
+Ordered lists use numbers followed by a period.
+```md
+1. First item
+2. Second item
+3. Third item
+```
+**Preview:**
+1. First item
+2. Second item
+3. Third item
+
+### Links
+You can create links using the following syntax:
+```md
+[Link text](URL)
+```
+
+For example:
+```md
+[Proton](https://www.proton.me)
+```
+
+**Preview:**
+[Proton](https://www.proton.me)
+
+<Aside type="tip">
+    Try to avoid using external links. We value security and reliability, so we prefer to link to internal wiki pages whenever possible.
+</Aside>
+
+### Images
+You can add images using a similar syntax to links, but with an exclamation mark `!` at the beginning:
+```md
+![Alt text](Image URL)
+```
+
+For example:
+```md
+![Silly Bnuy](https://distinct-errors.fr/SillyBnuy.png)
+```
+
+**Preview:**
+![Silly Bnuy](https://distinct-errors.fr/SillyBnuy.png)
+
+### Code
+You can format inline code by wrapping it in backticks `` ` ``:
+```md
+`Inline code`
+```
+
+For code blocks, you can use triple backticks:
+
+```md
+# Heading
+```
+
+### Blockquotes
+You can create blockquotes by using the `>` symbol followed by a space and the quoted text.
+```md
+> This is a blockquote.
+```
+**Preview:**
+> This is a blockquote.
+
+### Tables
+You can create tables using pipes `|` and hyphens `-`.
+```md
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |
+```
+**Preview:**
+
+| Column 1 | Column 2 | Column 3 |
+| -------- | -------- | -------- |
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |
+
+### Strikethrough
+You can strikethrough text by wrapping it in double tildes `~~`.
+```md
+~~Strikethrough~~
+```
+**Preview:**
+~~Strikethrough~~
+
+### Horizontal Rules
+You can create a horizontal divider using three or more hyphens `---`, asterisks `***`, or underscores `___`.
+```md
+---
+```
+**Preview:**
+
+---
+
+### Task Lists
+You can create task lists using `- [ ]` for unchecked and `- [x]` for checked items.
+```md
+- [x] Completed task
+- [ ] Incomplete task
+- [ ] Another task
+```
+**Preview:**
+- [x] Completed task
+- [ ] Incomplete task
+- [ ] Another task
+
+Now, you know the basics of Markdown! With this knowledge, you can start contributing to the wiki by formatting your content using Markdown syntax.
+
+## MDX / Starlight components
+Adding to Markdown, we also have MDX, which allows us to use React components in our markdown files.
+This means that you can use components like `Badge`, `Aside`, `LinkCard`, and more to enhance your wiki pages with interactive and styled elements.
+
+<Aside>
+    This category is not recommended to be used by beginners. 
+    This is mostly reserved to people using the "Hard" method, as it requires a bit more knowledge of how the wiki works and how to use VSCode. 
+    However, if you are comfortable with Markdown and want to learn how to use MDX, feel free to experiment with it, but you will not have any Preview of what it gives on other tools.
+</Aside>
+
+### Cards 
+Cards are a cool way to highlight important information or create visually appealing sections on your wiki pages.
+
+#### Normal Card
+This is just a normal card, with a title and some content. You can use it to highlight important information.
+
+export const normalCardCodeExemple = `
+import { Card } from '@astrojs/starlight/components';
+
+<Card title="Check this out">Interesting content you want to highlight.</Card>
+`
+export const normalCardCodeExempleFileName = `normalCardExemple.mdx`
+
+<Code lang="mdx" title={normalCardCodeExempleFileName} code={normalCardCodeExemple}></Code>
+
+**Preview:**
+
+import { Card } from '@astrojs/starlight/components';
+
+<Card title="Check this out">Interesting content you want to highlight.</Card>
+
+#### Icon Card
+This is Normal Card, but better! 
+
+export const iconCardCodeExemple = `
+import { Card } from '@astrojs/starlight/components';
+
+<Card title="Favorite!" icon="star">
+  Sharks are my favorite animals!
+</Card>
+`
+export const iconCardCodeExempleFileName = `iconCardExemple.mdx`
+export const iconCardCodeExempleHighlights = ['icon="star"']
+
+<Code lang="mdx" title={iconCardCodeExempleFileName} code={iconCardCodeExemple} highlights={iconCardCodeExempleHighlights}></Code>
+
+**Preview:**
+
+<Card title="Favorite!" icon="star">
+  Sharks are my favorite animals!
+</Card>
+
+### Link Cards
+Link Cards are a great way to create visually appealing links to other pages or external resources.
+
+#### Normal link cards
+
+export const linkCardCodeExemple = `
+import { LinkCard } from '@astrojs/starlight/components';
+
+<LinkCard title="Coolest lore" href="../../lore/prologue/" />
+`
+export const linkCardCodeExempleFileName = `linkCardExemple.mdx`
+
+<Code lang="mdx" title={linkCardCodeExempleFileName} code={linkCardCodeExemple}></Code>
+
+**Preview:**
+
+<LinkCard title="Coolest lore" href="../../lore/prologue/" />
+
+#### Link cards with description
+
+export const linkCardWithDescriptionCodeExemple = `
+import { LinkCard } from '@astrojs/starlight/components';
+
+<LinkCard 
+  title="Coolest lore" 
+  href="../../lore/prologue/" 
+  description="What is this world? Why do you want to know. It isn't yours anyway."
+/>
+`
+export const linkCardWithDescriptionCodeExempleFileName = `linkCardWithDescriptionExemple.mdx`
+
+<Code lang="mdx" title={linkCardWithDescriptionCodeExempleFileName} code={linkCardWithDescriptionCodeExemple}></Code>
+
+**Preview:**
+
+<LinkCard 
+  title="Coolest lore" 
+  href="../../lore/prologue/" 
+  description="What is this world? Why do you want to know. It isn't yours anyway."
+/>
+
+### Card Grids
+Card Grids are a great way to display multiple cards in a grid layout.
+
+export const cardGridCodeExemple = `
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <Card title="Check this out" icon="open-book">
+    Interesting content you want to highlight.
+  </Card>
+  <Card title="Other feature" icon="information">
+    More information you want to share.
+  </Card>
+</CardGrid>
+`
+export const cardGridCodeExempleFileName = `cardGridExemple.mdx`
+
+<Code lang="mdx" title={cardGridCodeExempleFileName} code={cardGridCodeExemple}></Code>
+
+**Preview:**
+<CardGrid>
+  <Card title="Check this out" icon="open-book">
+    Interesting content you want to highlight.
+  </Card>
+  <Card title="Other feature" icon="information">
+    More information you want to share.
+  </Card>
+</CardGrid>
