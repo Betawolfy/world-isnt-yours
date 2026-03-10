@@ -31,6 +31,11 @@ export default defineConfig({
 					label: 'Lore',
 					items: [
 						{ label: 'Prologue', slug: 'lore/prologue' },
+						{ label: 'Characters', items: [
+							{ label: 'Willow', slug: 'lore/characters/willow' }
+						]
+
+						}
 					]
 				},
 				{
