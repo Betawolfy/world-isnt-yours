@@ -5,7 +5,7 @@ description: A list of all the people who contributed to the Distinct Errors SMP
 
 ![Credits](../../assets/you-dont-need-them/credits.png)
 
-import { Steps, Icon, Badge, Aside, LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { Steps, Icon, Badge, Aside, LinkCard, CardGrid, Code } from '@astrojs/starlight/components';
 
 # Credits
 
@@ -53,6 +53,10 @@ import { Steps, Icon, Badge, Aside, LinkCard, CardGrid } from '@astrojs/starligh
 ## Wiki contributor :
 Those people has helped making the wiki better, by providing feedback, fixing typos, and adding content.
 
+** Wiki writers :**
+
+- @teaformiles
+
 **Wiki testers :**
 
 - @lxnarian
@@ -72,3 +76,17 @@ The wiki is built using [Starlight](https://astro.build/starlight), an open-sour
 │ ◠ ◡ ◠  Initiating launch sequence... right... now!
 ╰─────╯
 ```
+
+***Wiki Bnuy***, inspired from Houston, the most cutest Ascii bnuy ever.
+
+I love you, bnuy!
+
+export const exampleCode = `
+   (\\ /)
+   ( . .)           I love you too!
+ c((")("))
+`;
+export const fileName = 'bnuy.diserr';
+export const highlights = ['love', 'you'];
+
+<Code code={exampleCode} lang="txt" title={fileName} mark={highlights} />
