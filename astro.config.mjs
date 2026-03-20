@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeObsidian from 'starlight-theme-obsidian'
+import starlightThemeGalaxy from 'starlight-theme-galaxy'
 import Icons from 'unplugin-icons/vite'
 
 // https://astro.build/config
@@ -42,14 +43,12 @@ export default defineConfig({
 					label: 'Misc',
 					items: [
 						{ label: 'FAQ / Troubleshooting', slug: 'troubleshoot' },
+						{ label: 'Changelog', slug: 'devlogs' },
 						{ label: 'Credits', slug: 'credits' },
 					]
 				},
 			],
-			plugins: [starlightThemeObsidian({
-                   backlinks: false,
-                   graph: false
-            })],
+			plugins: [starlightThemeGalaxy()],
 		}),
 	],
 });
