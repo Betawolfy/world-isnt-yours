@@ -7,6 +7,7 @@ import Icons from "unplugin-icons/vite";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://wiki-v2.distinct-errors.fr/",
   prefetch: true,
   vite: {
     plugins: [Icons({ compiler: "astro" })],
