@@ -1,12 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import starlightThemeObsidian from 'starlight-theme-obsidian'
+import starlightSiteGraph from 'starlight-site-graph'
 import starlightThemeGalaxy from 'starlight-theme-galaxy'
 import Icons from 'unplugin-icons/vite'
 
 // https://astro.build/config
 export default defineConfig({
+	prefetch: true,
 	vite: {
 		plugins: [Icons({ compiler: 'astro' })],
 	},
@@ -31,12 +32,7 @@ export default defineConfig({
 				{
 					label: 'Lore',
 					items: [
-						{ label: 'Prologue', slug: 'lore/prologue' },
-						{ label: 'Characters', items: [
-							{ label: 'Willow', slug: 'lore/characters/willow' }
-						]
-
-						}
+						{ label: 'Home', slug: 'lore' }
 					]
 				},
 				{
@@ -48,7 +44,12 @@ export default defineConfig({
 					]
 				},
 			],
-			plugins: [starlightThemeGalaxy()],
+			plugins: [starlightThemeGalaxy(), starlightSiteGraph({
+             debug: false,       // See "General Settings"
+             sitemapConfig: {},    // See "Sitemap Settings"
+             graphConfig: {},      // See "Graph Settings"
+             backlinksConfig: {},    // See "Backlinks Settings"
+          })],
 		}),
 	],
 });
