@@ -4,7 +4,6 @@ import starlight from "@astrojs/starlight";
 import starlightSiteGraph from "starlight-site-graph";
 import starlightThemeGalaxy from "starlight-theme-galaxy";
 import Icons from "unplugin-icons/vite";
-import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -51,6 +50,5 @@ export default defineConfig({
         }),
       ],
     }),
-    sitemap(),
   ],
 });
