@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.1",
     "@astrojs/starlight": "^0.37.6",
     "@fontsource/inter": "^5.2.8",
     "@fontsource/jetbrains-mono": "^5.2.8",
@@ -20,7 +21,7 @@
     "starlight-theme-galaxy": "^0.7.0",
     "starlight-theme-obsidian": "^0.4.1",
     "unplugin-icons": "^23.0.1",
-    "vercel": "^50.29.0"
+    "vercel": "^50.37.0"
   },
   "overrides": {
     "picomatch": "^4.0.3"
