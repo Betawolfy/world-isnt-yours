@@ -15,6 +15,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Dist Err SMP Wiki",
+      customCss: ['./src/styles/custom.css'],
       sidebar: [
         {
           label: "Guides",
