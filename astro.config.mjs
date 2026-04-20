@@ -8,6 +8,7 @@ import Icons from "unplugin-icons/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://wiki-v2.distinct-errors.fr/",
+  
   prefetch: true,
   vite: {
     plugins: [Icons({ compiler: "astro" })],
@@ -15,6 +16,13 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Dist Err SMP Wiki",
+      social: [
+        {
+          icon: 'firefox',
+          label: 'Our Website',
+          href: 'https://distinct-errors.fr/',
+        },
+      ],
       customCss: ['./src/styles/custom.css'],
       sidebar: [
         {
@@ -44,12 +52,6 @@ export default defineConfig({
       ],
       plugins: [
         starlightThemeGalaxy(),
-        starlightSiteGraph({
-          debug: false, // See "General Settings"
-          sitemapConfig: {}, // See "Sitemap Settings"
-          graphConfig: {}, // See "Graph Settings"
-          backlinksConfig: {}, // See "Backlinks Settings"
-        }),
       ],
     }),
   ],
