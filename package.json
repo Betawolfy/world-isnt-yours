@@ -20,7 +20,7 @@
     "starlight-theme-galaxy": "^0.7.0",
     "starlight-theme-obsidian": "^0.4.1",
     "unplugin-icons": "^23.0.1",
-    "vercel": "^50.37.0"
+    "vercel": "^51.8.0"
   },
   "overrides": {
     "picomatch": "^4.0.3"
