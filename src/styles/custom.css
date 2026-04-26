@@ -2,3 +2,17 @@
   --sl-content-width: 70rem;
   --sl-text-5xl: 2.5rem;
 }
+
+sl-sidebar-state-persist ul.top-level > li:not(:has(details)) {
+  margin-top: 0rem;
+}
+sl-sidebar-state-persist ul.top-level > li:has(details) {
+  margin-block: 0.5rem; /* default value */
+}
+
+sl-sidebar-state-persist ul.top-level > li > a[aria-current="page"] {
+  font-weight: 600; /* default value */
+}
+sl-sidebar-state-persist ul.top-level > li > a:not([aria-current="page"]) {
+  font-weight: 400;
+}
