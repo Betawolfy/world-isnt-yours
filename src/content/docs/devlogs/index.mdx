@@ -1,6 +1,6 @@
 ---
 title: devlogs
-description: Devlogs of the Distinct Errors plugin.
+description: Devlogs of the Distinct Errors Server.
 ---
 import { Steps, Icon, Badge, Aside, LinkCard, CardGrid } from '@astrojs/starlight/components';
 
@@ -25,15 +25,84 @@ My current ideas are:
 
 Improving bedrock custom items, etc...
 
-*** new rank plates***
+<Aside type="note" title="Update notes">
+  All items that doesn't require a 3D model aren't visible for bedrock players, but all others shall be.
+</Aside>
+
+*** new rank plates*** <Badge text="Added in 3.3" variant="success" />
 
 ***Adding more of your ideas:***
 
 I am always open to new ideas for the server, so if you have any, feel free to share them in the discord or in DMs!
 
+### Version 3.3
+_May 2nd, 2026_
+<Badge text="Latest" variant="tip" /> <Badge text="VERY big update" variant="caution" />
+
+This update bring a complete rework of the RPChat and it's components, as well as a new rank plates.
+
+#### *RPChat / RP features rework:*
+
+- ***Introducing: `/character` command!***
+    - Added `/character add` command.
+        - This command allows you to add a character to your profile, which will be used for RPChat.
+        - the command usage is `/character add <character name>`, this will create a 3 long character ID, which will be used for RPChat.
+    - Added `/character delete` command.
+        - This command allows you to completely delete a character from your profile.
+        - the command usage is `/character delete <character ID>`, this will delete the character with the specified ID.
+    - Added `/character list` command.
+        - This command allows you to list all your characters and their IDs.
+    - Added `/character edit` command.
+        - This command allows you to rename a character from your profile.
+        - the command usage is `/character rename <character ID> <new character name>`, this will rename the character with the specified ID to the new name.
+    - Added `/character select` command.
+        - This command allows you to set your active character, which will be used for RPChat.
+        - the command usage is `/character select <character ID>`, this will set the character with the specified ID as your active character.
+
+![Character Management](../../../assets/devlogs/3_3/image_characters.png)
+
+
+    <Aside type="note" title="Note about multiple characters RPs">
+        Even if `/character select` is prioritized, typing any ID in the first part of your messafe will make you speak as that character, without changing your active character. 
+        ***HOWEVER***, it doesn't change the selected character, nor works with /me and /action.
+    </Aside>
+
+    - Added `/character clear` command.
+        - This command allows you to clear your active character, which will fallback to use your username
+        - the command usage is `/character clear`, this will clear your active character.
+
+
+- Added new RP features:
+    - Removed `/roll` and replaced it with `/dice <dice format>`
+        - This command allows you to roll a dice with the specified format, which is `NdM`, where N is the number of dice and M is the number of faces of the dice. 
+        For example, `2d6` will roll 2 6-faced dice and gives the output [4, 5] (for example) and the total (9 in this case).
+    - Added `/action` command.
+        - Similar to `/me`, but with a different format. instead of showing the RP name of the player, it just shows the action.
+          - It can be used to discribe the ambience, or the ***angst*** that is happening right now.
+
+#### Lore Shop: 
+
+- Lore shop
+    - Added a lore shop, which can be accessed with `/loreshop` command.
+    - This shop allows you to buy lore items with Topaz!
+
+![Lore Shop](../../../assets/devlogs/3_3/image.png)
+
+#### Others: 
+
+- Added a craft for topaz:
+    - 2 emeralds + 2 resin clamps = 2 topaz.
+
+![Topaz Craft](../../../assets/devlogs/3_3/image_topaz.png)
+
+- Revemped Mods and Admins rank plates.
+- Added a moderation command to moderate the RPChat.
+
+---
+
 ### Version 3.2
 _April 27th, 2026_
-<Badge text="Latest" variant="tip" /> <Badge text="big update" variant="caution" />
+<Badge text="big update" variant="caution" />
 
 This update bring new QoL features for logging, as well as new content for the ones who don't take care of their characters in lore.
 
